@@ -1,0 +1,169 @@
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+	margin: 0;
+	padding: 0;
+
+	color-scheme: dark;
+	color: var(--color-theme);
+	background-color: var(--color-bg);
+
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	--color-theme: rgba(255, 255, 255, 0.87);
+	--color-bg: #1c1b22;
+}
+
+/* theme-switch-btn */
+.theme-sw{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.theme-sw-icon{
+	cursor: pointer;
+	width: 25px;
+	height: 25px;
+	fill: var(--color-theme);
+	filter: drop-shadow(0px 0px 5px var(--color-theme));
+}
+/* theme-switch-btn over*/
+
+/* Game Title */
+.game-title {
+	margin: auto;
+	max-width: 400px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	gap: 10px;
+	margin-bottom: 60px;
+}
+
+.game-title-letter {
+	font-weight: 300;
+	font-size: 28px;
+	border: 2px solid var(--color-theme);
+	padding-inline: 10px;
+}
+
+
+@keyframes flip-title {
+	0% {
+		transform: rotateY(180deg);
+	}
+
+	100% {
+		transform: rotateY(0deg);
+	}
+}
+
+/*Game Title Over*/
+
+/* Difficulty Selection */
+.diff-sel {
+	font-family: monospace;
+	font-size: 18px;
+	width: 100%;
+}
+
+.diff-sel-prompt {
+	font-weight: 300;
+	font-size: 28px;
+}
+
+.diff-sel-levels {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	max-width: 750px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+.diff-sel-level {
+	cursor: pointer;
+	border: 2px solid var(--color-theme);
+	padding-inline: 10px;
+	transition: 0.25s;
+	outline: 0px solid var(--color-theme);
+	outline-offset: -40px;
+	font-size: 24px;
+}
+
+.diff-sel-level:hover {
+	outline-offset: 4px;
+	outline-width: 2px;
+	background: var(--color-theme);
+	color: var(--color-bg);
+}
+
+.diff-sel-level:nth-child(1):hover{
+	filter: drop-shadow(0px 0px 5px lightgreen);
+}
+.diff-sel-level:nth-child(2):hover{
+	filter: drop-shadow(0px 0px 5px orange);
+}
+.diff-sel-level:nth-child(3):hover{
+	filter: drop-shadow(0px 0px 5px red);
+}
+
+/* Difficulty Selection Over */
+
+@media screen and (max-width: 700px) {
+	.game-title-letter {
+		margin-top: 20px;
+		font-size: 18px;
+	}
+
+	.diff-sel-prompt {
+		font-size: 24px;
+	}
+
+	.diff-sel-level {
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.game-title{
+		gap: 5px;
+	}
+
+	.game-title-letter {
+		margin-top: 20px;
+		font-size: 16px;
+		padding-inline: 5px;
+	}
+
+	.diff-sel-prompt {
+		font-size: 20px;
+	}
+
+	.diff-sel-level {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 430px) {
+	.game-title{
+		gap: 2px;
+	}
+
+	.game-title-letter {
+		margin-top: 20px;
+		font-size: 14px;
+	}
+
+	.diff-sel-prompt {
+		font-size: 24px;
+	}
+
+	.diff-sel-level {
+		font-size: 18px;
+	}
+}
