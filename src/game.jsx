@@ -36,7 +36,7 @@ export default function Game(props) {
 				let randIndex;
 				if (tileImageCopy.length === 0) randIndex = 0;
 				else randIndex = Math.floor(getRandomArbitrary(0, tileImageCopy.length));
-				tilePosTemp.push({ id: tileImages.indexOf(tileImageCopy[randIndex]), img: `../src/assets/${tileImageCopy[randIndex]}.png`});
+				tilePosTemp.push({ id: tileImages.indexOf(tileImageCopy[randIndex]), img: `/${tileImageCopy[randIndex]}.png`});
 				tileImageCopy.splice(randIndex, 1);
 			}
 		}
